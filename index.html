@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pulsa Bot</title></head>
+<body>
+  <h2>✅ Pulsa Bot Iniciado</h2>
+  <p>📲 Escaneie o QR Code abaixo para conectar ao WhatsApp</p>
+  <div><img id="qrcode" style="max-width: 300px;" /></div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    ipcRenderer.on('qr', (event, qrDataUrl) => {
+      document.getElementById('qrcode').src = qrDataUrl;
+    });
+  </script>
+</body>
+</html>

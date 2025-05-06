@@ -1,0 +1,1 @@
+// Pode ser usado futuramente para segurança
